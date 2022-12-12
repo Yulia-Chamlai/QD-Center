@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -52,6 +53,10 @@ html {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+}
+
+.header-row {
+  position: relative;
 }
 
 .nav__ul {
@@ -344,6 +349,9 @@ html {
   line-height: 2.3rem;
   color: #fff;
 }
+.btn:hover {
+  color: black;
+}
 
 .subscription {
   background-color: #1c1b1f;
@@ -384,7 +392,7 @@ html {
           justify-content: space-between;
   padding: 2rem 1.4rem 2rem 3.1rem;
 }
-.subscription__inputplaceholder {
+.subscription__input.placeholder {
   color: #6c6c6c;
 }
 .subscription__input__btn {
@@ -536,12 +544,58 @@ footer {
   input {
     width: 20rem;
   }
+
+  .footer-item {
+    margin-bottom: 2rem;
+  }
 }
 @media (max-width: 720px) {
   input {
     width: 17rem;
   }
 }
+/*не готове закриття
+label {
+  display: none;
+}
+#menu {
+  display: none;
+}
+#nav {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  label {
+    display: block;
+    position: absolute;
+    left: 0;
+    transform: translateY(6rem);
+  }
+  #menu:checked ~ #nav {
+    display: block;
+    transform: translateX(0);
+  }
+
+  #nav {
+    position: absolute;
+    transform: translateY(8rem);
+    border-radius: 5px;
+    /*background-color: gray;
+    height: 500%;
+    opacity: 0.3;
+  }
+  .burger {
+    color: black;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    transition: $transition;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}*/
 .header {
   padding: 5rem 0;
 }

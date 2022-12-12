@@ -9,6 +9,9 @@
     justify-content: end;
   }
 }
+.header-row {
+  position: relative;
+}
 .nav {
   &__ul {
     display: flex;
@@ -228,7 +231,11 @@
   padding: 1rem 4.9rem;
   cursor: pointer;
   @include text($font-base, 600, 2rem, 2.3rem, $color-white);
+  &:hover {
+    color: black;
+  }
 }
+
 .subscription {
   background-color: $bg-dark;
   border-radius: 1rem;
@@ -254,7 +261,7 @@
     display: flex;
     justify-content: space-between;
     padding: 2rem 1.4rem 2rem 3.1rem;
-    &placeholder {
+    &.placeholder {
       color: $p-holder;
     }
     &__btn {
@@ -356,9 +363,55 @@ footer {
   input {
     width: 20rem;
   }
+  .footer-item {
+    margin-bottom: 2rem;
+  }
 }
+
 @media (max-width: 720px) {
   input {
     width: 17rem;
   }
 }
+/*не готове закриття
+label {
+  display: none;
+}
+#menu {
+  display: none;
+}
+#nav {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  label {
+    display: block;
+    position: absolute;
+    left: 0;
+    transform: translateY(6rem);
+  }
+  #menu:checked ~ #nav {
+    display: block;
+    transform: translateX(0);
+  }
+
+  #nav {
+    position: absolute;
+    transform: translateY(8rem);
+    border-radius: 5px;
+    /*background-color: gray;
+    height: 500%;
+    opacity: 0.3;
+  }
+  .burger {
+    color: black;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    transition: $transition;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}*/

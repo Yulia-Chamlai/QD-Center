@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CD-Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -64,20 +64,35 @@
                 />
               </div>
             </div>
-            <!--
-
+            <div class="menu-wrapper">
+              <input type="checkbox" id="menu" />
               <label for="menu">
-                <span class="material-icons">menu</span>
+                <div class="burger-line first"></div>
+                <div class="burger-line second"></div>
+                <div class="burger-line third"></div>
+                <div class="burger-line fourth"></div>
               </label>
-              <input id="menu" type="checkbox" />
-              <nav id="nav">
-                <a class="burger" href="#">Home</a>
-                <a class="burger" href="#">Service</a>
-                <a class="burger" href="#">Doctors</a>
-                <a class="burger" href="#">Gallery</a>
-                <a class="burger" href="#">Contacts</a>
+
+              <nav class="burger__nav">
+                <ul class="burger__ul">
+                  <li class="burger__li">
+                    <a class="burger__a" href="#">Home</a>
+                  </li>
+                  <li class="burger__li">
+                    <a class="burger__a" href="#">Service</a>
+                  </li>
+                  <li class="burger__li">
+                    <a class="burger__a" href="#">Doctors</a>
+                  </li>
+                  <li class="burger__li">
+                    <a class="burger__a" href="#">Gallery</a>
+                  </li>
+                  <li class="burger__li">
+                    <a class="burger__a" href="#">Contacts</a>
+                  </li>
+                </ul>
               </nav>
-            -->
+            </div>
           </div>
         </header>
         <div class="slider">
@@ -139,14 +154,21 @@
                 facilisis eu dolor. Quam sit risus egestas morbi.
               </div>
               <div class="item__links links">
-                <a href="#" class="links__link"
-                  >Learn More
-                  <img
-                    class="links__icon"
-                    src="./img/icons/arrowforward.svg"
-                    alt="arrowforward"
-                  />
-                </a>
+                <a href="#" class="links__link">Learn More </a>
+                <div class="links__icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 16L6.575 14.6L12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16Z"
+                      fill="#8842f0"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
 
@@ -171,14 +193,21 @@
                 facilisis eu dolor. Quam sit risus egestas morbi.
               </div>
               <div class="item__links links">
-                <a href="#" class="links__link"
-                  >Learn More
-                  <img
-                    class="links__icon"
-                    src="./img/icons/arrowforward.svg"
-                    alt="arrowforward"
-                  />
-                </a>
+                <a href="#" class="links__link">Learn More </a>
+                <div class="links__icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 16L6.575 14.6L12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16Z"
+                      fill="#8842F0"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
 
@@ -203,14 +232,21 @@
                 facilisis eu dolor. Quam sit risus egestas morbi.
               </div>
               <div class="item__links links">
-                <a href="#" class="links__link"
-                  >Learn More
-                  <img
-                    class="links__icon"
-                    src="./img/icons/arrowforward.svg"
-                    alt="arrowforward"
-                  />
-                </a>
+                <a href="#" class="links__link">Learn More </a>
+                <div class="links__icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 16L6.575 14.6L12.175 9H0V7H12.175L6.575 1.4L8 0L16 8L8 16Z"
+                      fill="#8842F0"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -413,10 +449,16 @@
           <div class="contacts__title">Address</div>
           <p class="contacts__description">5 Koh Sek Lim Rd Singapore 486050</p>
           <div class="contacts__title">Telephone</div>
-          <p class="contacts__description">(07)40127246</p>
-          <p class="contacts__description">(02)67566577</p>
+          <a href="tel:0740127246" class="contacts__description"
+            >(07)40127246</a
+          >
+          <a href="tel:0267566577" class="contacts__description"
+            >(02)67566577</a
+          >
           <div class="contacts__title">Email</div>
-          <p class="contacts__description">name@email.com</p>
+          <a href="mailto: name@email.com" class="contacts__description"
+            >name@email.com</a
+          >
         </div>
 
         <div class="footer-item schedule">
@@ -441,107 +483,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-<!--
-
-            <div class="items__block block col-sm-10 col-md-8 col-lg-4">
-              <div class="block__header">
-                <div class="block__header_photo">
-                  <img src="./img/doctor1.png" alt="img doctor's" />
-                </div>
-                <div class="block__header_title">Kornelia Atkinson, MD</div>
-                <div class="block__header_subtitle">
-                  Interventional Cardiologist
-                </div>
-              </div>
-              <div class="block__description">
-                Velit faucibus sed adipiscing commodo. Mattis in at amet,
-                facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
-                sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
-                Quam sit risus egestas morbi.Velit faucibus sed adipiscing
-              </div>
-              <button class="block__btn btn">Book Appointment</button>
-            </div>
-            <div class="items__block block col-sm-10 col-md-8 col-lg-4">
-              <div class="block__header">
-                <div class="block__header_photo">
-                  <img src="./img/doctor2.png" alt="img doctor's" />
-                </div>
-                <div class="block__header_title">Humera Wood, MD</div>
-                <div class="block__header_subtitle">
-                  OB-GYN Nurse Practitioner
-                </div>
-              </div>
-              <div class="block__description">
-                Velit faucibus sed adipiscing commodo. Mattis in at amet,
-                facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
-                sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
-                Quam sit risus egestas morbi.Velit faucibus sed adipiscing
-              </div>
-              <button class="block__btn btn">Book Appointment</button>
-            </div>
-            <div class="items__block block col-sm-10 col-md-8 col-lg-4">
-              <div class="block__header">
-                <div class="block__header_photo">
-                  <img src="./img/doctor3.png" alt="img doctor's" />
-                </div>
-                <div class="block__header_title">Athena Barrow, MD</div>
-                <div class="block__header_subtitle">Critical Care Specialist</div>
-              </div>
-              <div class="block__description">
-                Velit faucibus sed adipiscing commodo. Mattis in at amet,
-                facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
-                sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
-                Quam sit risus egestas morbi.Velit faucibus sed adipiscing
-              </div>
-              <button class="block__btn btn">Book Appointment</button>
-            </div>
-            <div class="items__block block col-sm-10 col-md-8 col-lg-4">
-              <div class="block__header">
-                <div class="block__header_photo">
-                  <img src="./img/doctor4.png" alt="img doctor's" />
-                </div>
-                <div class="block__header_title">Sion Jennings, MD</div>
-                <div class="block__header_subtitle">Nurse Practitioner</div>
-              </div>
-              <div class="block__description">
-                Velit faucibus sed adipiscing commodo. Mattis in at amet,
-                facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
-                sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
-                Quam sit risus egestas morbi.Velit faucibus sed adipiscing
-              </div>
-              <button class="block__btn btn">Book Appointment</button>
-            </div>
-            <div class="items__block block col-sm-10 col-md-8 col-lg-4">
-              <div class="block__header">
-                <div class="block__header_photo">
-                  <img src="./img/doctor5.png" alt="img doctor's" />
-                </div>
-                <div class="block__header_title">Natasha Grant, MD</div>
-                <div class="block__header_subtitle">Immunologist</div>
-              </div>
-              <div class="block__description">
-                Velit faucibus sed adipiscing commodo. Mattis in at amet,
-                facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
-                sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
-                Quam sit risus egestas morbi.Velit faucibus sed adipiscing
-              </div>
-              <button class="block__btn btn">Book Appointment</button>
-            </div>
-            <div class="items__block block col-sm-10 col-md-8 col-lg-4">
-              <div class="block__header">
-                <div class="block__header_photo">
-                  <img src="./img/doctor6.png" alt="img doctor's" />
-                </div>
-                <div class="block__header_title">Zubair Mac, MD</div>
-                <div class="block__header_subtitle">Nurse Practitioner</div>
-              </div>
-              <div class="block__description">
-                Velit faucibus sed adipiscing commodo. Mattis in at amet,
-                facilisis eu dolor. Quam sit risus egestas morbi.Velit faucibus
-                sed adipiscing commodo. Mattis in at amet, facilisis eu dolor.
-                Quam sit risus egestas morbi.Velit faucibus sed adipiscing
-              </div>
-              <button class="block__btn btn">Book Appointment</button>
-            </div>
-          -->

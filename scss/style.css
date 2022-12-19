@@ -36,6 +36,11 @@ img {
   height: auto;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: "Work Sans", sans-serif;
 }
@@ -458,6 +463,7 @@ footer {
   padding-bottom: 7.7rem;
   margin-top: 13rem;
   border-radius: 1rem;
+  max-width: 1440px;
 }
 
 .footer-wrapper {
@@ -676,19 +682,19 @@ label {
   display: none;
 }
 
-l #menu:checked ~ .second {
+#menu:checked ~ .second {
   display: block;
   -webkit-transform: rotate(43deg);
           transform: rotate(43deg);
 }
 
-l #menu:checked ~ .third {
+#menu:checked ~ .third {
   display: block;
   -webkit-transform: rotate(-43deg);
           transform: rotate(-43deg);
 }
 
-l #menu:checked ~ .fourth {
+#menu:checked ~ .fourth {
   display: none;
 }
 

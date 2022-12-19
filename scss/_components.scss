@@ -306,6 +306,7 @@ footer {
   padding-bottom: 7.7rem;
   margin-top: 13rem;
   border-radius: 1rem;
+  max-width: 1440px;
 }
 .footer-wrapper {
   max-width: 117rem;
@@ -394,7 +395,7 @@ footer {
   position: relative;
   width: 20rem;
   top: 0;
-  left: 0;
+  left: 3px;
   display: none;
 }
 label {
@@ -460,15 +461,17 @@ label {
   transition: $transition;
 }
 
-label .burger-line:checked ~ .first {
+#menu:checked ~ .first {
   display: none;
 }
-label .burger-line:checked ~ .second {
+#menu:checked ~ .second {
+  display: block;
   transform: rotate(43deg);
 }
-label .burger-line:checked ~ .third {
+#menu:checked ~ .third {
+  display: block;
   transform: rotate(-43deg);
 }
-label .burger-line:checked ~ .fourth {
+#menu:checked ~ .fourth {
   display: none;
 }

@@ -425,6 +425,7 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 1.4rem 1rem 3.1rem;
+  padding-right: 205px;
 }
 .subscription__input.placeholder {
   color: #6c6c6c;
@@ -437,8 +438,8 @@ html {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.subscription input {
-  max-width: 300px;
+
+input {
   border: 0;
   outline: none;
   background-color: #f9f1fe;

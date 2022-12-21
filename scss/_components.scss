@@ -137,7 +137,6 @@
 }
 .item {
   margin-bottom: 2rem;
-
   background-color: $color-cards;
   border-radius: $b-radius;
   padding: 4.6rem 2.6rem 5.1rem 2.6rem;
@@ -145,7 +144,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   transition: $transition;
   &:hover {
     background: $color-primary;
@@ -220,6 +218,7 @@
     display: flex;
     gap: 1.3rem;
     align-items: center;
+    margin-bottom: 2.5rem;
 
     .top__title-name {
       @include text($font-base, 600, 2rem, 2.3rem, $color-dark);
@@ -228,17 +227,14 @@
       @include text($font-base, 400, 1.6rem, 1.9rem, $color-desc);
     }
   }
-}
-.top {
-  margin-bottom: 2.5rem;
-}
-.block__description {
-  @include text($font-base, 400, 1.6rem, 1.9rem, $color-desc);
-  margin-bottom: 2.5rem;
-}
-.block__btn {
-  width: 100%;
-  margin: 0 auto;
+  &__description {
+    @include text($font-base, 400, 1.6rem, 1.9rem, $color-desc);
+    margin-bottom: 2.5rem;
+  }
+  &__btn {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .btn {
@@ -281,6 +277,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.4rem 1rem 3.1rem;
+    padding-right: 205px;
     &.placeholder {
       color: $p-holder;
     }
@@ -294,7 +291,6 @@
   }
 }
 input {
-  flex-grow: 1;
   border: 0;
   outline: none;
   background-color: $color-cards;
@@ -391,87 +387,88 @@ footer {
 }
 
 //burger menu start
-.menu-wrapper {
-  position: relative;
-  width: 20rem;
-  top: 0;
-  left: 3px;
-  display: none;
+#menu__toggle {
+  opacity: 0;
 }
-label {
-  display: none;
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 5;
+  > span,
+  > span::before,
+  > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition-duration: 0.25s;
+  }
+  > span::before {
+    content: "";
+    top: -8px;
+  }
+  > span::after {
+    content: "";
+    top: 8px;
+  }
+  @media (min-width: 1200px) {
+    display: none;
+  }
 }
-#menu {
-  display: none;
-}
-.burger-line {
-  position: absolute;
-  width: 3rem;
-  height: 0.3rem;
-  background-color: $color-black;
-  left: 0.5rem;
-  z-index: 3;
-  transition: $transition;
-  top: 0.8rem;
-}
-.second,
-.third {
-  top: 1.8rem;
-}
-.fourth {
-  top: 2.8rem;
-}
-
-.burger__nav {
-  position: absolute;
-  background-color: #d6d6d6a8;
-  width: 30rem;
-  padding: 5rem;
-  z-index: 2;
-  display: none;
-  text-align: center;
-  border-radius: 0 1rem 1rem 0;
-  transition: $transition;
-}
-.burger__nav ul {
+.menu__box {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  margin: 0;
+  padding: 180px 0;
+  text-align: center;
+  background-color: #a89b9b61;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  transition-duration: 0.25s;
 }
-
-.burger__nav a {
-  font-size: 2rem;
-  text-decoration: underline;
-  color: black;
-  transition: $transition;
-  &:hover {
+.menu__item {
+  display: block;
+  font-size: 30px;
+  line-height: 45px;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.25s;
+  :hover {
     color: $color-primary;
   }
 }
-@media (max-width: 1200px) {
-  .menu-wrapper {
-    display: block;
-  }
-  label {
-    display: block;
-  }
+.menu__link {
+  color: #f9f1fe;
+  font-weight: 700;
 }
-#menu:checked ~ .burger__nav {
-  display: block;
-  transition: $transition;
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
 }
-
-#menu:checked ~ .first {
-  display: none;
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
 }
-#menu:checked ~ .second {
-  display: block;
-  transform: rotate(43deg);
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
 }
-#menu:checked ~ .third {
-  display: block;
-  transform: rotate(-43deg);
-}
-#menu:checked ~ .fourth {
-  display: none;
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
 }
